@@ -126,3 +126,8 @@
   font-size: 70px;
   color: #515076;
 }
+
+.product-card__image-wrapper {
+  height: 245px;
+  width: 290px;
+}
