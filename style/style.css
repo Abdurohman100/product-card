@@ -131,3 +131,16 @@
   height: 245px;
   width: 290px;
 }
+
+.color-buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  justify-content: space-evenly;
+}
+
+.open-google__button {
+  display: flex;
+  justify-content: flex-end;
+  order: -1;
+}
