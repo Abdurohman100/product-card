@@ -1,3 +1,4 @@
+//покраска одной карточки
 const recolorFirstCardButton = document.getElementById('recolor-first-card-button')
 const firstProductCard = document.querySelector('.product-card')
 const blueHashColor = '#0000ff'
@@ -7,26 +8,39 @@ recolorFirstCardButton.addEventListener('click', () => {
 })
 
 //покраска всех карточек
-const redHashColor = '#ff0000';
-
+const pinkHashColor = '#ff84b5';
 const ProductCards = document.querySelectorAll('.product-card')
 const recolorAllCardButton = document.getElementById('recolor-all-card-button')
 
 recolorAllCardButton.addEventListener('click', () => {
   ProductCards.forEach(
-    card => card.style.backgroundColor = redHashColor
+    card => card.style.backgroundColor = pinkHashColor
   )
 })
 
 //переход на страницу Google
 const googleOpenButton = document.getElementById('open-google-button')
-googleOpenButton.addEventListener ('click', openGoogle)
+googleOpenButton.addEventListener('click', openGoogle)
 function openGoogle() {
-  const answer = confirm ('Вы действительно хотите перейти на страницу Google?')
+  const answer = confirm('Вы действительно хотите перейти на страницу Google?')
 
   if (answer === true) {
-    window.open ('http://google.com');
+    window.open('http://google.com');
   } else {
-    console.log ('Пользователь отменил переход на Google')
+    console.log('Пользователь отменил переход на Google')
   }
 }
+
+//всплывающий текст при наведении мышью на заголовок
+const effectSwipeMouse = document.querySelector('.headline')
+effectSwipeMouse.addEventListener('mouseover', swipeMouse)
+
+function swipeMouse() {
+console.log('Пользователь навел мышь на надпись "Выбери свой товар"')
+}
+
+//кнопка меняющая цвет при нажатии
+const funButton = document.querySelector ('.fun-button')
+funButton.addEventListener('click', function() {
+  funButton.classList.toggle('active-blue');
+})
